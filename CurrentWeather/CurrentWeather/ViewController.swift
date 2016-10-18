@@ -14,14 +14,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        refreshWeather()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
-
+    func refreshWeather() {
+        
+        let client = APIClient()
+        client.fetchWeather(location: "", completion: { (data, error) -> Void in
+            print("Here's the weather inside the VC:", data, error)
+        })
+    }
 }
 

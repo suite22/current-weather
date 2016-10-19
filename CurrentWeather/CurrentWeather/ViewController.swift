@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     private var currentWeather: WeatherModel? {
         didSet {
-            currentTempLabel.text = "\(currentWeather!.temperature)°"
+            modelDidChange()
         }
     }
     
@@ -36,6 +36,16 @@ class ViewController: UIViewController {
                 self.currentWeather = model
             }
         })
+    }
+    
+    func modelDidChange() {
+        guard let weather = currentWeather else {
+            print("Failed to load model.")
+            return
+        }
+        
+        let tempRounded = round(weather.temperature)
+        currentTempLabel.text = "\(tempRounded)°"
     }
 }
 

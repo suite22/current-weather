@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         let client = APIClient()
         client.fetchWeather(location: "", completion: { (data, error) -> Void in
-            print("Here's the weather inside the VC:", data, error)
+            
         })
     }
 }

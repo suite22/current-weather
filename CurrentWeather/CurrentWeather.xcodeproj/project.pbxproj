@@ -16,6 +16,7 @@
 		9BCAC0491DB5C5B500FD49B5 /* CurrentWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC0481DB5C5B500FD49B5 /* CurrentWeatherUITests.swift */; };
 		9BCAC05A1DB6725500FD49B5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC0591DB6725500FD49B5 /* APIClient.swift */; };
 		9BCAC05B1DB6725500FD49B5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC0591DB6725500FD49B5 /* APIClient.swift */; };
+		9BCAC05F1DB70E6900FD49B5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC05E1DB70E6900FD49B5 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9BCAC0481DB5C5B500FD49B5 /* CurrentWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherUITests.swift; sourceTree = "<group>"; };
 		9BCAC04A1DB5C5B500FD49B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BCAC0591DB6725500FD49B5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9BCAC05E1DB70E6900FD49B5 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9BCAC0281DB5C5B500FD49B5 /* AppDelegate.swift */,
 				9BCAC02A1DB5C5B500FD49B5 /* ViewController.swift */,
 				9BCAC0591DB6725500FD49B5 /* APIClient.swift */,
+				9BCAC05E1DB70E6900FD49B5 /* WeatherModel.swift */,
 				9BCAC02C1DB5C5B500FD49B5 /* Main.storyboard */,
 				9BCAC02F1DB5C5B500FD49B5 /* Assets.xcassets */,
 				9BCAC0311DB5C5B500FD49B5 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCAC05F1DB70E6900FD49B5 /* WeatherModel.swift in Sources */,
 				9BCAC02B1DB5C5B500FD49B5 /* ViewController.swift in Sources */,
 				9BCAC0291DB5C5B500FD49B5 /* AppDelegate.swift in Sources */,
 				9BCAC05A1DB6725500FD49B5 /* APIClient.swift in Sources */,
@@ -520,6 +524,7 @@
 				9BCAC04F1DB5C5B500FD49B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BCAC0501DB5C5B500FD49B5 /* Build configuration list for PBXNativeTarget "CurrentWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				9BCAC0521DB5C5B500FD49B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BCAC0531DB5C5B500FD49B5 /* Build configuration list for PBXNativeTarget "CurrentWeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				9BCAC0551DB5C5B500FD49B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

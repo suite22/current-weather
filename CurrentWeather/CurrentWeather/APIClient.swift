@@ -15,13 +15,17 @@ class APIClient {
     
     func fetchWeather(location: String, completion: @escaping (Data?, Error?) -> Void) {
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            
             guard error == nil else {
                 print("Got error response:", error)
                 completion(nil, error)
                 return
             }
             
-            print("Fetched the latest weather:", data, response)
+            if let data = data,
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                print("Printing JSON:", json)
+            }
             completion(data, nil)
         })
         

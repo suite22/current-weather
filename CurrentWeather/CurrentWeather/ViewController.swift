@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var currentTempLabel: UILabel!
     
+    private var currentWeather: WeatherModel? {
+        didSet {
+            currentTempLabel.text = "\(currentWeather!.temperature)°"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +30,11 @@ class ViewController: UIViewController {
     }
 
     func refreshWeather() {
-        
         let client = APIClient()
-        client.fetchWeather(location: "", completion: { (data, error) -> Void in
-            
+        client.fetchWeather(location: ("", ""), completion: { (model, error) -> Void in
+            DispatchQueue.main.async {
+                self.currentWeather = model
+            }
         })
     }
 }

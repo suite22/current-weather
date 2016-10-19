@@ -15,14 +15,6 @@ class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
-    // cLat and cLon should be set at the same time, so only using the didSet on cLat
-    internal var cLat: CLLocationDegrees? {
-        didSet {
-            refreshWeather()
-        }
-    }
-    internal var cLon: CLLocationDegrees?
-    
     private var currentWeather: WeatherModel? {
         didSet {
             modelDidChange()
@@ -55,9 +47,10 @@ class ViewController: UIViewController {
 
     }
 
-    func refreshWeather() {
+    func refreshWeather(lat: CLLocationDegrees, lon: CLLocationDegrees) {
+        let request = APIRequest(location: (lat, lon))
         let client = APIClient()
-        client.fetchWeather(location: ("", ""), completion: { (model, error) -> Void in
+        client.fetchWeather(request: request, completion: { (model, error) -> Void in
             DispatchQueue.main.async {
                 self.currentWeather = model
             }
@@ -88,8 +81,7 @@ extension ViewController: CLLocationManagerDelegate {
             return
         }
         
-        cLat = location.coordinate.latitude
-        cLon = location.coordinate.longitude
+        refreshWeather(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
     }
 }
 

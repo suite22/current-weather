@@ -13,7 +13,7 @@ typealias Location = (Lat: String, Lon: String)
 class APIClient {
     
     private let session = URLSession(configuration: URLSessionConfiguration.default)
-    private let request = URLRequest(url: URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=45.5231&lon=122.6765&units=imperial&appid=16c64820094829d1e919d8ffa06d63ee")!)
+    private let request = URLRequest(url: URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=45.5231&lon=-122.6765&units=imperial&appid=16c64820094829d1e919d8ffa06d63ee")!)
     
     func fetchWeather(location: Location, completion: @escaping (WeatherModel?, Error?) -> Void) {
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in

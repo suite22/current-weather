@@ -29,17 +29,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portland" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Kl-9oj">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.78823529410000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="1d3-Kl-9oj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3es-8N-8Iw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mpW-Xi-s68" secondAttribute="trailing" constant="40" id="8EW-qp-9OP"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="C9Q-OW-Kqz"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="top" secondItem="WhH-3q-GcG" secondAttribute="bottom" id="Dln-vG-lxj"/>
+                            <constraint firstItem="1d3-Kl-9oj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z4z-eI-Zm1"/>
                             <constraint firstItem="WhH-3q-GcG" firstAttribute="centerX" secondItem="mpW-Xi-s68" secondAttribute="centerX" id="ix0-c8-WX8"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tw1-0c-ecf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="1d3-Kl-9oj" id="TsW-QV-ROT"/>
                         <outlet property="currentTempLabel" destination="mpW-Xi-s68" id="x6W-Z0-8rR"/>
                     </connections>
                 </viewController>

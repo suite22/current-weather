@@ -12,6 +12,7 @@ import CoreLocation
 class ViewController: UIViewController {
 
     @IBOutlet weak var currentTempLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     
     let locationManager = CLLocationManager()
     
@@ -65,6 +66,7 @@ class ViewController: UIViewController {
         
         let tempRounded = round(weather.temperature)
         currentTempLabel.text = "\(tempRounded)°"
+        cityLabel.text = weather.locationName
     }
 }
 

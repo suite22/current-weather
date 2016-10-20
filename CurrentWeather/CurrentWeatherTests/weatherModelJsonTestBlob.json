@@ -1,11 +1,13 @@
-{"coord":{"lon":-122.42,"lat":37.77},
-"sys":{"country":"US","sunrise":1476973413,"sunset":1477013070},
-"weather":[{"id":804,"main":"clouds","description":"overcast clouds","icon":"04n"}],
-"main":{"temp":57.75,"humidity":89,"pressure":1013,"temp_min":57.75,"temp_max":57.75},
-"wind":{"speed":7.31,"deg":187.002},
-"rain":{"3h":0},
-"clouds":{"all":92},
-"dt":1476929916,
-"id":5391959,
-"name":"San Francisco",
-"cod":200}
+{
+    "coord": {"lon":-122.42,"lat":37.77},
+    "sys":{"country":"US","sunrise":1476973413,"sunset":1477013070},
+    "weather":[{"id":804,"main":"clouds","description":"overcast clouds","icon":"04n"}],
+    "main":{"temp":57.75,"humidity":89,"pressure":1013,"temp_min":57.75,"temp_max":57.75},
+    "wind":{"speed":7.31,"deg":187.002},
+    "rain":{"3h":0},
+    "clouds":{"all":92},
+    "dt":1476929916,
+    "id":5391959,
+    "name":"San Francisco",
+    "cod":200
+}

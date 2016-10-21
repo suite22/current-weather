@@ -67,8 +67,7 @@ class ViewController: UIViewController {
             return
         }
         
-        let tempRounded = round(weather.temperature)
-        currentTempLabel.text = "\(tempRounded)°"
+        currentTempLabel.text = weather.temperature
         cityLabel.text = weather.locationName
         sunriseLabel.text = weather.sunrise
         sunsetLabel.text = weather.sunset

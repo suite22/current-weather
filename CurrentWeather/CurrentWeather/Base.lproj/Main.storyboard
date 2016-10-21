@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portland" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Kl-9oj">
@@ -54,11 +54,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhH-3q-GcG">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.78823529410000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -69,17 +64,15 @@
                             <constraint firstItem="64j-90-0Bx" firstAttribute="trailing" secondItem="eqe-ev-VPF" secondAttribute="trailing" id="8Oj-BV-s35"/>
                             <constraint firstItem="1d3-Kl-9oj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="97p-SG-LnE"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="C9Q-OW-Kqz"/>
-                            <constraint firstItem="mpW-Xi-s68" firstAttribute="top" secondItem="WhH-3q-GcG" secondAttribute="bottom" id="Dln-vG-lxj"/>
                             <constraint firstItem="6lt-ta-7zm" firstAttribute="top" secondItem="1d3-Kl-9oj" secondAttribute="bottom" constant="5" id="QIS-0i-6aa"/>
                             <constraint firstItem="6lt-ta-7zm" firstAttribute="trailing" secondItem="1d3-Kl-9oj" secondAttribute="trailing" id="Reb-sW-1sP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eqe-ev-VPF" secondAttribute="trailing" id="TRA-GI-wZD"/>
                             <constraint firstItem="eqe-ev-VPF" firstAttribute="baseline" secondItem="YuZ-mm-Xnb" secondAttribute="baseline" id="aQl-up-l0d"/>
                             <constraint firstItem="6lt-ta-7zm" firstAttribute="leading" secondItem="1d3-Kl-9oj" secondAttribute="leading" id="eZj-fB-iPa"/>
-                            <constraint firstItem="WhH-3q-GcG" firstAttribute="centerX" secondItem="mpW-Xi-s68" secondAttribute="centerX" id="ix0-c8-WX8"/>
                             <constraint firstItem="8yV-d7-PfB" firstAttribute="leading" secondItem="YuZ-mm-Xnb" secondAttribute="leading" id="mxB-Jq-AEk"/>
                             <constraint firstItem="8yV-d7-PfB" firstAttribute="top" secondItem="YuZ-mm-Xnb" secondAttribute="bottom" constant="5" id="nUo-nC-NDT"/>
                             <constraint firstItem="64j-90-0Bx" firstAttribute="baseline" secondItem="8yV-d7-PfB" secondAttribute="baseline" id="rdG-nl-e9G"/>
-                            <constraint firstItem="mpW-Xi-s68" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="tw1-0c-ecf"/>
+                            <constraint firstItem="mpW-Xi-s68" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="tw1-0c-ecf"/>
                             <constraint firstItem="YuZ-mm-Xnb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uXt-Pc-EBe"/>
                         </constraints>
                     </view>

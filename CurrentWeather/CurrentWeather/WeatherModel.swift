@@ -9,11 +9,15 @@
 import Foundation
 
 struct WeatherModel {
-    let temperature: Double
     let locationName: String
     let shortDescription: String
+    fileprivate let temp: Double
     fileprivate let sunriseTime: Date
     fileprivate let sunsetTime: Date
+    
+    var temperature: String {
+        return "\(lround(temp))°"
+    }
     
     var sunrise: String {
         return convert(date: sunriseTime)
@@ -45,9 +49,9 @@ extension WeatherModel {
             return nil
         }
         
-        self.temperature = temp
+        self.temp = temp
         self.locationName = name
-        self.shortDescription = description
+        self.shortDescription = description.capitalized
         self.sunriseTime = Date(timeIntervalSince1970: TimeInterval(sunrise))
         self.sunsetTime = Date(timeIntervalSince1970: TimeInterval(sunset))
     }

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var sunriseLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
     
@@ -71,6 +72,7 @@ class ViewController: UIViewController {
         cityLabel.text = weather.locationName
         sunriseLabel.text = weather.sunrise
         sunsetLabel.text = weather.sunset
+        descriptionLabel.text = weather.shortDescription
     }
 }
 

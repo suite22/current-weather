@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var sunriseLabel: UILabel!
+    @IBOutlet weak var sunsetLabel: UILabel!
     
     let locationManager = CLLocationManager()
     
@@ -67,6 +69,8 @@ class ViewController: UIViewController {
         let tempRounded = round(weather.temperature)
         currentTempLabel.text = "\(tempRounded)°"
         cityLabel.text = weather.locationName
+        sunriseLabel.text = weather.sunrise
+        sunsetLabel.text = weather.sunset
     }
 }
 

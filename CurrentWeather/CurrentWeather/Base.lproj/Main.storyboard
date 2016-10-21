@@ -34,21 +34,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuZ-mm-Xnb">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yV-d7-PfB">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunset" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-ev-VPF">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64j-90-0Bx">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.78823529410000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="YuZ-mm-Xnb" firstAttribute="top" secondItem="1d3-Kl-9oj" secondAttribute="bottom" constant="5" id="1kD-tv-hs2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1d3-Kl-9oj" secondAttribute="trailing" id="2U8-UV-0cx"/>
                             <constraint firstItem="1d3-Kl-9oj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3es-8N-8Iw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mpW-Xi-s68" secondAttribute="trailing" constant="40" id="8EW-qp-9OP"/>
+                            <constraint firstItem="64j-90-0Bx" firstAttribute="trailing" secondItem="eqe-ev-VPF" secondAttribute="trailing" id="8Oj-BV-s35"/>
+                            <constraint firstItem="1d3-Kl-9oj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="97p-SG-LnE"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="C9Q-OW-Kqz"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="top" secondItem="WhH-3q-GcG" secondAttribute="bottom" id="Dln-vG-lxj"/>
-                            <constraint firstItem="1d3-Kl-9oj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z4z-eI-Zm1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eqe-ev-VPF" secondAttribute="trailing" id="TRA-GI-wZD"/>
+                            <constraint firstItem="eqe-ev-VPF" firstAttribute="baseline" secondItem="YuZ-mm-Xnb" secondAttribute="baseline" id="aQl-up-l0d"/>
                             <constraint firstItem="WhH-3q-GcG" firstAttribute="centerX" secondItem="mpW-Xi-s68" secondAttribute="centerX" id="ix0-c8-WX8"/>
+                            <constraint firstItem="8yV-d7-PfB" firstAttribute="leading" secondItem="YuZ-mm-Xnb" secondAttribute="leading" id="mxB-Jq-AEk"/>
+                            <constraint firstItem="8yV-d7-PfB" firstAttribute="top" secondItem="YuZ-mm-Xnb" secondAttribute="bottom" constant="5" id="nUo-nC-NDT"/>
+                            <constraint firstItem="64j-90-0Bx" firstAttribute="baseline" secondItem="8yV-d7-PfB" secondAttribute="baseline" id="rdG-nl-e9G"/>
                             <constraint firstItem="mpW-Xi-s68" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tw1-0c-ecf"/>
+                            <constraint firstItem="YuZ-mm-Xnb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uXt-Pc-EBe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="1d3-Kl-9oj" id="TsW-QV-ROT"/>
                         <outlet property="currentTempLabel" destination="mpW-Xi-s68" id="x6W-Z0-8rR"/>
+                        <outlet property="sunriseLabel" destination="8yV-d7-PfB" id="LMh-fu-rA4"/>
+                        <outlet property="sunsetLabel" destination="64j-90-0Bx" id="aYQ-bC-AAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

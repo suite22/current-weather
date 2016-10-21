@@ -11,19 +11,40 @@ import Foundation
 struct WeatherModel {
     let temperature: Double
     let locationName: String
+    fileprivate let sunriseTime: Date
+    fileprivate let sunsetTime: Date
     
+    var sunrise: String {
+        return convert(date: sunriseTime)
+    }
+    
+    var sunset: String {
+        return convert(date: sunsetTime)
+    }
+    
+    private func convert(date: Date) -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "hh:mm a"
+        return dateFormat.string(from: date)
+    }
 }
 
 extension WeatherModel {
     init?(json: [String: Any]) {
         guard let main = json["main"] as? [String: Double],
             let temp = main["temp"],
-        let name = json["name"] as? String
+            let name = json["name"] as? String,
+            let sys = json["sys"] as? [String: Any],
+            let sunrise = sys["sunrise"] as? Int,
+            let sunset = sys["sunset"] as? Int
         else {
+            print("Failed to init model with json.")
             return nil
         }
         
         self.temperature = temp
         self.locationName = name
+        self.sunriseTime = Date(timeIntervalSince1970: TimeInterval(sunrise))
+        self.sunsetTime = Date(timeIntervalSince1970: TimeInterval(sunset))
     }
 }

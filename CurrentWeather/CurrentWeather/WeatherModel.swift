@@ -11,12 +11,13 @@ import Foundation
 struct WeatherModel {
     let locationName: String
     let shortDescription: String
-    fileprivate let temp: Double
+    fileprivate let temperatureRaw: Double
     fileprivate let sunriseTime: Date
     fileprivate let sunsetTime: Date
+    fileprivate let windSpeedRaw: Double
     
     var temperature: String {
-        return "\(lround(temp))°"
+        return "\(lround(temperatureRaw))°"
     }
     
     var sunrise: String {
@@ -27,6 +28,16 @@ struct WeatherModel {
         return convert(date: sunsetTime)
     }
     
+    var windSpeed: String {
+        return "\(round(windSpeedRaw)) mph"
+    }
+    
+    /**
+        Convert the date to a string that's presentable
+     
+        - parameter date: Date object to convert from
+        - returns: Date string to be displayed
+     */
     private func convert(date: Date) -> String {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "hh:mm a"
@@ -43,16 +54,20 @@ extension WeatherModel {
             let sunrise = sys["sunrise"] as? Int,
             let sunset = sys["sunset"] as? Int,
             let weather = json["weather"] as? [[String: Any]],
-            let description = weather[0]["description"] as? String
+            let description = weather[0]["description"] as? String,
+            let wind = json["wind"] as? [String: Double],
+            let windSpeed = wind["speed"],
+            let windDirection = wind["deg"]
         else {
             print("Failed to init model with json.")
             return nil
         }
         
-        self.temp = temp
+        self.temperatureRaw = temp
         self.locationName = name
         self.shortDescription = description.capitalized
         self.sunriseTime = Date(timeIntervalSince1970: TimeInterval(sunrise))
         self.sunsetTime = Date(timeIntervalSince1970: TimeInterval(sunset))
+        self.windSpeedRaw = windSpeed
     }
 }

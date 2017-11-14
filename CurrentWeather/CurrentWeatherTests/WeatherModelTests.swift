@@ -22,6 +22,6 @@ class WeatherModelTests: XCTestCase {
         let model = WeatherModel(json: json!)
         
         // then
-        XCTAssertTrue(model?.temperature == 57.75, "Expect temperature to match json test payload.")
+        XCTAssertTrue(model?.temperature == "58°", "Expect temperature to match json test payload.")
     }
 }

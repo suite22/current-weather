@@ -15,6 +15,7 @@ struct WeatherModel {
     fileprivate let sunriseTime: Date
     fileprivate let sunsetTime: Date
     fileprivate let windSpeedRaw: Double
+    fileprivate let windDirection: Double
     
     var temperature: String {
         return "\(lround(temperatureRaw))°"
@@ -69,5 +70,6 @@ extension WeatherModel {
         self.sunriseTime = Date(timeIntervalSince1970: TimeInterval(sunrise))
         self.sunsetTime = Date(timeIntervalSince1970: TimeInterval(sunset))
         self.windSpeedRaw = windSpeed
+        self.windDirection = windDirection
     }
 }

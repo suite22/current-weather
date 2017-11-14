@@ -41,7 +41,7 @@ class APIClient {
                 return
             }
             
-            print("Printing JSON:", json)
+            print("Printing JSON:", json ?? "Error: empty JSON")
             if let json = json {
                 if let weather = WeatherModel(json: json) {
                     completion(weather, nil)
